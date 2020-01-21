@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+
+
+    <LinearLayout
+        android:id="@+id/b_linearLayout"
+        android:layout_width="@dimen/dimen_form_size"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/b_gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/b_et_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/string_mail"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/b_et_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/string_pw"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:id="@+id/b_bt_signIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/string_signIn" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/b_gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_noAccount"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/b_tv_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_stringClick_margin"
+            android:onClick="onClick"
+            android:text="@string/string_signUp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

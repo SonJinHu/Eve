@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ctp_square_iv_ac3"
+        style="@style/ImageViewYes1"
+        android:src="@drawable/ic_charger_ac_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ctp_square_iv_cha"
+        style="@style/ImageViewYes1"
+        android:src="@drawable/ic_charger_dc_chademo"
+        app:layout_constraintEnd_toStartOf="@+id/ctp_square_iv_combo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctp_square_iv_ac3"
+        app:layout_constraintTop_toTopOf="@+id/ctp_square_iv_combo"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ctp_square_iv_combo"
+        style="@style/ImageViewYes1"
+        android:src="@drawable/ic_charger_dc_combo"
+        app:layout_constraintEnd_toStartOf="@+id/ctp_square_iv_single"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctp_square_iv_cha"
+        app:layout_constraintTop_toTopOf="@+id/ctp_square_iv_single"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ctp_square_iv_single"
+        style="@style/ImageViewNo1"
+        android:src="@drawable/ic_charger_ac_single"
+        app:layout_constraintEnd_toStartOf="@+id/ctp_square_iv_super"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctp_square_iv_combo"
+        app:layout_constraintTop_toTopOf="@+id/ctp_square_iv_super"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ctp_square_iv_super"
+        style="@style/ImageViewNo1"
+        android:src="@drawable/ic_charger_tesla"
+        app:layout_constraintEnd_toStartOf="@+id/ctp_square_iv_h2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctp_square_iv_single"
+        app:layout_constraintTop_toTopOf="@+id/ctp_square_iv_h2"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ctp_square_iv_h2"
+        style="@style/ImageViewNo1"
+        android:src="@drawable/ic_charger_hydrogen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/ctp_square_tv_ac3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chargerType_ac3"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/b_sheet_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ctp_square_iv_ac3"
+        app:layout_constraintStart_toStartOf="@+id/ctp_square_iv_ac3"
+        app:layout_constraintTop_toBottomOf="@+id/ctp_square_iv_ac3" />
+
+    <TextView
+        android:id="@+id/ctp_square_tv_cha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chargerType_cha"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/b_sheet_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ctp_square_iv_cha"
+        app:layout_constraintStart_toStartOf="@+id/ctp_square_iv_cha"
+        app:layout_constraintTop_toBottomOf="@+id/ctp_square_iv_cha" />
+
+    <TextView
+        android:id="@+id/ctp_square_tv_combo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chargerType_combo"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/b_sheet_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ctp_square_iv_combo"
+        app:layout_constraintStart_toStartOf="@+id/ctp_square_iv_combo"
+        app:layout_constraintTop_toBottomOf="@+id/ctp_square_iv_combo" />
+
+    <TextView
+        android:id="@+id/ctp_square_tv_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chargerType_single"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/b_sheet_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ctp_square_iv_single"
+        app:layout_constraintStart_toStartOf="@+id/ctp_square_iv_single"
+        app:layout_constraintTop_toBottomOf="@+id/ctp_square_iv_single" />
+
+    <TextView
+        android:id="@+id/ctp_square_tv_super"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chargerType_super"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/b_sheet_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ctp_square_iv_super"
+        app:layout_constraintStart_toStartOf="@+id/ctp_square_iv_super"
+        app:layout_constraintTop_toBottomOf="@+id/ctp_square_iv_super" />
+
+    <TextView
+        android:id="@+id/ctp_square_tv_h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chargerType_h2"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/b_sheet_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ctp_square_iv_h2"
+        app:layout_constraintStart_toStartOf="@+id/ctp_square_iv_h2"
+        app:layout_constraintTop_toBottomOf="@+id/ctp_square_iv_h2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

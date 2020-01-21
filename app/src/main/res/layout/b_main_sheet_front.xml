@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/b_sheet_front"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rounded_card"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_card_handle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/b_sheet_front_tv_snm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="marquee"
+        android:fontFamily="sans-serif-condensed"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="충전소 이름"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_local_parking_black_24dp"
+        android:tint="@color/colorDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/b_sheet_front_tv_park"
+        app:layout_constraintStart_toStartOf="@+id/b_sheet_front_tv_snm"
+        app:layout_constraintTop_toTopOf="@+id/b_sheet_front_tv_park" />
+
+    <TextView
+        android:id="@+id/b_sheet_front_tv_park"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="무료 주차"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_tv_snm" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_access_alarm_black_24dp"
+        android:tint="@color/colorDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/b_sheet_front_tv_park"
+        app:layout_constraintStart_toEndOf="@+id/b_sheet_front_tv_park"
+        app:layout_constraintTop_toTopOf="@+id/b_sheet_front_tv_park" />
+
+    <TextView
+        android:id="@+id/b_sheet_tv_utime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="24시간 이용 가능"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_tv_snm"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/b_sheet_constraint_ctp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_tv_park">
+
+        <ImageView
+            android:id="@+id/b_sheet_front_iv_ac3"
+            style="@style/ImageViewYes"
+            android:src="@drawable/ic_charger_ac_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/b_sheet_front_iv_cha"
+            style="@style/ImageViewYes"
+            android:src="@drawable/ic_charger_dc_chademo"
+            app:layout_constraintEnd_toStartOf="@+id/b_sheet_front_iv_combo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/b_sheet_front_iv_ac3"
+            app:layout_constraintTop_toTopOf="@+id/b_sheet_front_iv_combo" />
+
+        <ImageView
+            android:id="@+id/b_sheet_front_iv_combo"
+            style="@style/ImageViewYes"
+            android:src="@drawable/ic_charger_dc_combo"
+            app:layout_constraintEnd_toStartOf="@+id/b_sheet_front_iv_single"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/b_sheet_front_iv_cha"
+            app:layout_constraintTop_toTopOf="@+id/b_sheet_front_iv_single" />
+
+        <ImageView
+            android:id="@+id/b_sheet_front_iv_single"
+            style="@style/ImageViewNo"
+            android:src="@drawable/ic_charger_ac_single"
+            app:layout_constraintEnd_toStartOf="@+id/b_sheet_front_iv_super"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/b_sheet_front_iv_combo"
+            app:layout_constraintTop_toTopOf="@+id/b_sheet_front_iv_super" />
+
+        <ImageView
+            android:id="@+id/b_sheet_front_iv_super"
+            style="@style/ImageViewNo"
+            android:src="@drawable/ic_charger_tesla"
+            app:layout_constraintEnd_toStartOf="@+id/b_sheet_front_iv_h2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/b_sheet_front_iv_single"
+            app:layout_constraintTop_toTopOf="@+id/b_sheet_front_iv_h2" />
+
+        <ImageView
+            android:id="@+id/b_sheet_front_iv_h2"
+            style="@style/ImageViewNo"
+            android:src="@drawable/ic_charger_hydrogen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/b_sheet_front_tv_ac3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chargerType_ac3"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/b_sheet_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_ac3"
+            app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_ac3"
+            app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_ac3" />
+
+        <TextView
+            android:id="@+id/b_sheet_front_tv_cha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chargerType_cha"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/b_sheet_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_cha"
+            app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_cha"
+            app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_cha" />
+
+        <TextView
+            android:id="@+id/b_sheet_front_tv_combo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chargerType_combo"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/b_sheet_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_combo"
+            app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_combo"
+            app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_combo" />
+
+        <TextView
+            android:id="@+id/b_sheet_front_tv_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chargerType_single"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/b_sheet_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_single"
+            app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_single"
+            app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_single" />
+
+        <TextView
+            android:id="@+id/b_sheet_front_tv_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chargerType_super"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/b_sheet_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_super"
+            app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_super"
+            app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_super" />
+
+        <TextView
+            android:id="@+id/b_sheet_front_tv_h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/chargerType_h2"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/b_sheet_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_h2"
+            app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_h2"
+            app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_h2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/b_sheet_constraint_ctp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_sheet_front_acb_path"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_directions_black_24dp"
+            android:drawableTint="@color/colorBlue"
+            android:text="경로" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/b_sheet_front_acb_bookmark"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/selector_toggle"
+            android:drawableTint="@color/colorBlue"
+            android:textOff="즐겨찾기"
+            android:textOn="즐겨찾기" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/b_sheet_front_acb_share"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_share_black_24dp"
+            android:drawableTint="@color/colorBlue"
+            android:text="공유" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

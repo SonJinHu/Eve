@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/c_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/c_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            android:paddingStart="6dp"
+            android:paddingEnd="16dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/ic_close_black_24dp">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="검색 필터"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/parent_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="충전타입"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.example.newtest.common.CheckableImageView
+                        android:id="@+id/ba_iv_ac3"
+                        android:layout_width="@dimen/filter_img_size"
+                        android:layout_height="@dimen/filter_img_size"
+                        android:background="@drawable/selector_btn"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_charger_ac_3"
+                        android:tint="@color/selector_img"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ba_tv_ac3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/chargerType_ac3"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/ba_iv_ac3"
+                        app:layout_constraintStart_toStartOf="@+id/ba_iv_ac3"
+                        app:layout_constraintTop_toBottomOf="@+id/ba_iv_ac3" />
+
+                    <com.example.newtest.common.CheckableImageView
+                        android:id="@+id/ba_iv_cha"
+                        android:layout_width="@dimen/filter_img_size"
+                        android:layout_height="@dimen/filter_img_size"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/selector_btn"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_charger_dc_chademo"
+                        android:tint="@color/selector_img"
+                        app:layout_constraintBottom_toBottomOf="@+id/ba_iv_ac3"
+                        app:layout_constraintStart_toEndOf="@+id/ba_iv_ac3" />
+
+                    <TextView
+                        android:id="@+id/ba_tv_cha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/chargerType_cha"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/ba_iv_cha"
+                        app:layout_constraintStart_toStartOf="@+id/ba_iv_cha"
+                        app:layout_constraintTop_toBottomOf="@+id/ba_iv_cha" />
+
+                    <com.example.newtest.common.CheckableImageView
+                        android:id="@+id/ba_iv_combo"
+                        android:layout_width="@dimen/filter_img_size"
+                        android:layout_height="@dimen/filter_img_size"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/selector_btn"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_charger_dc_combo"
+                        android:tint="@color/selector_img"
+                        app:layout_constraintBottom_toBottomOf="@+id/ba_iv_cha"
+                        app:layout_constraintStart_toEndOf="@+id/ba_iv_cha" />
+
+                    <TextView
+                        android:id="@+id/c_tv_combo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/chargerType_combo"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/ba_iv_combo"
+                        app:layout_constraintStart_toStartOf="@+id/ba_iv_combo"
+                        app:layout_constraintTop_toBottomOf="@+id/ba_iv_combo" />
+
+                    <com.example.newtest.common.CheckableImageView
+                        android:id="@+id/c_iv_single"
+                        android:layout_width="@dimen/filter_img_size"
+                        android:layout_height="@dimen/filter_img_size"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/selector_btn"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_charger_ac_single"
+                        android:tint="@color/selector_img"
+                        app:layout_constraintBottom_toBottomOf="@+id/ba_iv_combo"
+                        app:layout_constraintStart_toEndOf="@+id/ba_iv_combo" />
+
+                    <TextView
+                        android:id="@+id/c_tv_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/chargerType_single"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/c_iv_single"
+                        app:layout_constraintStart_toStartOf="@+id/c_iv_single"
+                        app:layout_constraintTop_toBottomOf="@+id/c_iv_single" />
+
+                    <com.example.newtest.common.CheckableImageView
+                        android:id="@+id/c_iv_super"
+                        android:layout_width="@dimen/filter_img_size"
+                        android:layout_height="@dimen/filter_img_size"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/selector_btn"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_charger_tesla"
+                        android:tint="@color/selector_img"
+                        app:layout_constraintBottom_toBottomOf="@+id/c_iv_single"
+                        app:layout_constraintStart_toEndOf="@+id/c_iv_single" />
+
+                    <TextView
+                        android:id="@+id/c_tv_super"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/chargerType_super"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/c_iv_super"
+                        app:layout_constraintStart_toStartOf="@+id/c_iv_super"
+                        app:layout_constraintTop_toBottomOf="@+id/c_iv_super" />
+
+                    <com.example.newtest.common.CheckableImageView
+                        android:id="@+id/c_iv_h2"
+                        android:layout_width="@dimen/filter_img_size"
+                        android:layout_height="@dimen/filter_img_size"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/selector_btn"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_charger_hydrogen"
+                        android:tint="@color/selector_img"
+                        app:layout_constraintBottom_toBottomOf="@+id/c_iv_super"
+                        app:layout_constraintStart_toEndOf="@+id/c_iv_super" />
+
+                    <TextView
+                        android:id="@+id/ba_tv_h2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/chargerType_h2"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/c_iv_h2"
+                        app:layout_constraintStart_toStartOf="@+id/c_iv_h2"
+                        app:layout_constraintTop_toBottomOf="@+id/c_iv_h2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/TextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="주차비"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/c_rg_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:checkedButton="@id/c_rb_all"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                <RadioButton
+                    android:id="@+id/c_rb_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모두" />
+
+                <RadioButton
+                    android:id="@+id/c_rb_charged"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="유료" />
+
+                <RadioButton
+                    android:id="@+id/c_rb_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="무료" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/TextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="충전업체"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/c_rg_parking"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/c_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="1"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="@+id/textView9"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/c_tv_countAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/33"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/c_tv_count"
+                app:layout_constraintStart_toEndOf="@+id/c_tv_count"
+                app:layout_constraintTop_toTopOf="@+id/c_tv_count"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/c_tv_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="선택하기"
+                android:textColor="@color/colorBlue"
+                app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView9"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText" />
+
+            <!--<androidx.appcompat.widget.AppCompatImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:src="@drawable/ic_add_circle_outline_black_24dp"-->
+            <!--android:tint="@color/colorBlue"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/textView9"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/textView9" />-->
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/c_chipGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                <!--<com.google.android.material.chip.Chip-->
+                <!--style="@style/Widget.MaterialComponents.Chip.Action"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/charger_33"-->
+                <!--app:chipBackgroundColor="@color/colorBlueBackground"-->
+                <!--app:chipIcon="@drawable/logo_example_pure" />-->
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

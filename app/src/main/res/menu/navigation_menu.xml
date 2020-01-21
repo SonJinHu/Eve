@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/single">
+        <item
+            android:id="@+id/nav_bookmark"
+            android:icon="@drawable/ic_bookmark_black_24dp"
+            android:title="즐겨찾기" />
+        <item
+            android:id="@+id/nav_comment"
+            android:icon="@drawable/ic_comment_black_24dp"
+            android:title="내가 쓴 댓글" />
+    </group>
+    <group android:id="@+id/single2">
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@drawable/ic_volume_up_black_24dp"
+            android:title="공지사항" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="설정" />
+    </group>
+</menu>

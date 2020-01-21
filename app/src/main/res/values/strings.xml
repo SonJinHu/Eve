@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">EVe</string>
+    <string name="kakao_app_key">9ba43bc53e288e506c18b665ac25e1b7</string>
+
+    <string name="string_mail">메일 주소</string>
+    <string name="string_name">이름</string>
+    <string name="string_pw">비밀번호</string>
+    <string name="string_checkPw">비밀번호 확인</string>
+    <string name="string_signIn">로그인</string>
+    <string name="string_signUp">가입하기</string>
+    <string name="string_signOut">로그아웃</string>
+    <string name="string_createAccount">계정 만들기</string>
+
+    <string name="string_noAccount">계정이 없으신가요?</string>
+    <string name="string_alreadyAccount">이미 계정이 있으신가요?</string>
+    <string name="string_alertBackBtn">\'뒤로\'버튼을 한번 더 누르면 종료됩니다.</string>
+
+    <string name="chargerType_ac3">AC3상</string>
+    <string name="chargerType_cha">DC차데모</string>
+    <string name="chargerType_combo">DC콤보</string>
+    <string name="chargerType_single">AC단상</string>
+    <string name="chargerType_super">슈퍼차저</string>
+    <string name="chargerType_h2">수소</string>
+
+    <string name="charger_00">환경부</string>
+    <string name="charger_12">제주전기차</string> //제주전기자동차서비스
+    <string name="charger_13">한국전력</string>
+    <string name="charger_14">한국전기차</string> //한국전기차충전서비스
+    <string name="charger_15">포스코</string>
+    <string name="charger_16">서울시</string>
+    <string name="charger_17">기아자동차</string>
+    <string name="charger_18">현대자동차</string>
+    <string name="charger_19">제주도</string> //제주특별자치도
+    <string name="charger_20">대구환경공단</string>
+    <string name="charger_21">한국환경공단</string>
+    <string name="charger_22">수원시</string>
+    <string name="charger_23">에스트래픽</string>
+    <string name="charger_24">지엔텔</string>
+    <string name="charger_25">KT</string>
+    <string name="charger_26">에버온</string>
+    <string name="charger_27">울릉군청</string>
+    <string name="charger_28">인천국제공항</string>
+    <string name="charger_29">시그넷</string>
+    <string name="charger_30">대영채비</string>
+    <string name="charger_31">클린일렉스</string>
+    <string name="charger_32">이카플러그</string>
+    <string name="charger_33">광주시</string>
+    <string name="charger_34">보타리에너지</string>
+    <string name="charger_35">제이앤씨플랜</string>
+    <string name="charger_36">양양군</string>
+    <string name="charger_37">전주시</string>
+    <string name="charger_38">정읍시</string>
+    <string name="charger_39">파워큐브</string>
+    <string name="charger_40">익산시</string>
+    <string name="charger_41">군포시</string>
+    <string name="charger_42">대구시</string>
+    <string name="charger_43">삼척시</string>
+    <string name="charger_89">수소충전소</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_c_sub">c_sub</string>
+</resources>

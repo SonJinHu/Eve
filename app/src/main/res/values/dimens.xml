@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="filter_img_size">55dp</dimen>
+
+    <dimen name="dimen_form_size">300dp</dimen>
+    <dimen name="dimen_textInputLayout_margin">16dp</dimen>
+    <dimen name="dimen_stringClick_margin">4dp</dimen>
+
+    <dimen name="b_sheet_iv_size">45dp</dimen>
+    <dimen name="b_sheet_iv_miniSize">40dp</dimen>
+    <dimen name="b_sheet_status_iv_size">35dp</dimen>
+    <dimen name="b_sheet_text_size">12sp</dimen>
+
+    <dimen name="ctp_square_iv_size">40dp</dimen>
+</resources>

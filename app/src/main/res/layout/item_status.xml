@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/b_sheet_front_iv_ac3"
+                android:layout_width="@dimen/b_sheet_status_iv_size"
+                android:layout_height="@dimen/b_sheet_status_iv_size"
+                android:background="@drawable/shape_round_edge_blue"
+                android:padding="8dp"
+                android:src="@drawable/ic_charger_ac_3"
+                android:tint="@color/colorBlue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/b_sheet_front_iv_cha"
+                android:layout_width="@dimen/b_sheet_status_iv_size"
+                android:layout_height="@dimen/b_sheet_status_iv_size"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/shape_round_edge_blue"
+                android:padding="8dp"
+                android:src="@drawable/ic_charger_dc_chademo"
+                android:tint="@color/colorBlue"
+                app:layout_constraintBottom_toBottomOf="@+id/b_sheet_front_iv_ac3"
+                app:layout_constraintStart_toEndOf="@+id/b_sheet_front_iv_ac3"
+                app:layout_constraintTop_toTopOf="@+id/b_sheet_front_iv_ac3" />
+
+            <ImageView
+                android:id="@+id/b_sheet_front_iv_combo"
+                android:layout_width="@dimen/b_sheet_status_iv_size"
+                android:layout_height="@dimen/b_sheet_status_iv_size"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_round_edge_blue"
+                android:padding="8dp"
+                android:src="@drawable/ic_charger_dc_combo"
+                android:tint="@color/colorBlue"
+                app:layout_constraintEnd_toEndOf="@+id/b_sheet_front_iv_ac3"
+                app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_ac3"
+                app:layout_constraintTop_toBottomOf="@+id/b_sheet_front_iv_ac3" />
+
+            <ImageView
+                android:id="@+id/b_sheet_front_iv_single"
+                android:layout_width="@dimen/b_sheet_status_iv_size"
+                android:layout_height="@dimen/b_sheet_status_iv_size"
+                android:background="@drawable/shape_round_edge_gray"
+                android:padding="8dp"
+                android:src="@drawable/ic_charger_ac_single"
+                android:tint="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="@+id/b_sheet_front_iv_cha"
+                app:layout_constraintTop_toTopOf="@+id/b_sheet_front_iv_combo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_constraint_super"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/white"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/b_sheet_status_iv_size"
+                    android:layout_height="@dimen/b_sheet_status_iv_size"
+                    android:background="@drawable/shape_round_edge_blue"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_charger_tesla"
+                    android:tint="@color/colorBlue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_constraint_h2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/white"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/b_sheet_status_iv_size"
+                    android:layout_height="@dimen/b_sheet_status_iv_size"
+                    android:background="@drawable/shape_round_edge_blue"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_charger_hydrogen"
+                    android:tint="@color/colorBlue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_status_constraint_cst"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/item_status_tv_cst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="통신미연결"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
